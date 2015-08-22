@@ -1,5 +1,6 @@
 package com.krishna.dev.webdriver.basetest;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -14,26 +15,28 @@ import com.krishna.dev.pagecomponents.LoginPage;
 import com.krishna.dev.pagecomponents.TextField;
 import com.krishna.dev.pagelocators.LoginPageLocators;
 import com.krishna.dev.utils.ActionUtility;
+import com.krishna.dev.utils.PropertyFileUtility;
 import com.krishna.dev.utils.WaitForUtility;
 
 public class BaseTest {
-	
+
 	protected static WebDriver driver;
 	protected TextField textField = new TextField(driver);
-	protected LoginPage loginPage= new LoginPage(driver);
+	protected LoginPage loginPage = new LoginPage(driver);
+	private PropertyFileUtility propertyFileUtils = new PropertyFileUtility();
 
 	@BeforeClass
 	public void launchApplication() {
 		driver = new FirefoxDriver();
-		String url="http://demo.actitime.com/login.do";
-		LoginPage.open(driver, url);
+		LoginPage.open(driver, propertyFileUtils.getPropertyValue("url"));
 		WaitForUtility.waitForSeconds(driver, 20);
+
 	}
 
 	@BeforeMethod
 	public void loginPage() {
-		textField.enterText(driver,loginPage.NAME, "admin");
-		textField.enterText(driver,loginPage.PASSWORD, "manager");
+		textField.enterText(driver, loginPage.NAME, propertyFileUtils.getPropertyValue("username"));
+		textField.enterText(driver, loginPage.PASSWORD, propertyFileUtils.getPropertyValue("password"));
 		ActionUtility.waitAndClick(driver, loginPage.LOGIN_BUTTON);
 
 	}
