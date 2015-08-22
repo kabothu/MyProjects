@@ -46,17 +46,14 @@ public class ActionUtility {
   private static final String ADDED = " Added ";
   private static final long WAIT_TIMEOUT = 30L;
 
-  // prevents instantiation of ActionUtility
   private ActionUtility() {
   }
 
   /**
-   * Opens the url.
-   * 
-   * @param driver
-   * @param url
-   */
-  public static void open(final WebDriver driver, String url) {
+ * @param driver
+ * @param url
+ */
+public static void open(final WebDriver driver, String url) {
     driver.get(url);
     logStep(OPEN + url);
   }
