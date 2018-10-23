@@ -1,6 +1,8 @@
 package com.krishna.service.client;
 
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.MultivaluedMap;
+
 import org.apache.log4j.Logger;
 import com.krishna.service.requestbuilder.TestServiceRequestBuilder;
 import com.krishna.services.util.LoggerHelper;
@@ -21,7 +23,6 @@ public class TestServiceClientResponse {
 		logger.info("Get http Request: " + request.getUrl());
 		this.response = request.getClient().resource(request.getUrl()).accept(MediaType.APPLICATION_JSON)
 				.get(ClientResponse.class);
-		getLoggerInfo();
 		return response;
 	}
 
@@ -29,7 +30,6 @@ public class TestServiceClientResponse {
 		logger.info("Get http Request: " + request.getUrl());
 		this.response = request.getClient().resource(request.getUrl()).accept(MediaType.APPLICATION_JSON)
 				.post(ClientResponse.class, payload);
-		getLoggerInfo();
 		return response;
 	}
 
@@ -37,7 +37,6 @@ public class TestServiceClientResponse {
 		logger.info("Get http Request: " + request.getUrl());
 		this.response = request.getClient().resource(request.getUrl()).accept(MediaType.APPLICATION_JSON)
 				.put(ClientResponse.class, payload);
-		getLoggerInfo();
 		return response;
 	}
 
@@ -45,13 +44,12 @@ public class TestServiceClientResponse {
 		logger.info("Get http Request: " + request.getUrl());
 		this.response = request.getClient().resource(request.getUrl()).accept(MediaType.APPLICATION_JSON)
 				.delete(ClientResponse.class);
-		getLoggerInfo();
 		return response;
 	}
 
-	public void getLoggerInfo() {
-		logger.info("Response Headers: " + response.getHeaders());
-		logger.info("Response Status: " + response.getStatus());
-		logger.info("Response Returned: " + response.getEntity(String.class));
+	public void loggerInfo(MultivaluedMap<String, String> headers,int statusCode, String response) {
+		logger.info("Response Headers: " + headers);
+		logger.info("Response Status: " + statusCode);
+		logger.info("Response Returned: " + response);
 	}
 }

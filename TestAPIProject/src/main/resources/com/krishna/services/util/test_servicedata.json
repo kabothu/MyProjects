@@ -2,7 +2,38 @@
   "testService": [
     {
       "name": "batsman",
-      "description": "BatManMovie"
+      "description": "Positive case for Movie name",
+      "expectedResponseCode":"200"
+    },
+    {
+      "name": "bats$man",
+      "description": "Movie name with special characters",
+      "expectedResponseCode":"200"
+    },
+    {
+      "name": "bahubhali",
+      "description": "International Movie name",
+      "expectedResponseCode":"200"
+    }
+  ],
+  "testServiceWithCount": [
+   {
+      "name": "batsman",
+      "count":"-1",
+      "description": "Count with negative values",
+      "expectedResponseCode":"200"
+    },
+    {
+      "name": "batsman",
+      "count":"6",
+      "description": "count with positive values",
+      "expectedResponseCode":"200"
+    },
+    {
+      "name": "batsman",
+      "count":"0",
+      "description": "count with alpha numeric values",
+      "expectedResponseCode":"200"
     }
   ]
 }

@@ -4,6 +4,10 @@ public class TestService {
 	private String description;
 
 	private String name;
+	
+	private String count;
+	
+	private String expectedResponseCode;
 
 	public String getDescription() {
 		return description;
@@ -19,6 +23,22 @@ public class TestService {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getCount() {
+		return count;
+	}
+
+	public void setCount(String count) {
+		this.count = count;
+	}
+
+	public String getExpectedResponseCode() {
+		return expectedResponseCode;
+	}
+
+	public void setExpectedResponseCode(String expectedResponseCode) {
+		this.expectedResponseCode = expectedResponseCode;
 	}
 
 	@Override

@@ -15,8 +15,8 @@ public class TestServiceDataProvider {
 	
 	
 	
-	@DataProvider(name = "xpdPool")
-	public static Object[][] getXPDPoolURL() {
+	@DataProvider(name = "testURI")
+	public static Object[][] getTestURI() {
 		Object[] urlsToBeLocalized = {testServiceConfigFileUtil.getPropertyValue(PROPERTY_FILE_NAME,"TEST_URI") };
 		return new Object[][] {urlsToBeLocalized};
 	}
@@ -37,8 +37,28 @@ public class TestServiceDataProvider {
 	}
 
 	@DataProvider(name = "getTestService_dataProvider")
-	public static Object[][] getItemImageService_dataProvider() throws Exception {
-		return TestServiceDataUtils.combine(getXPDPoolURL(), getTestService());
+	public static Object[][] getTestService_dataProvider() throws Exception {
+		return TestServiceDataUtils.combine(getTestURI(), getTestService());
+	}
+	
+	@DataProvider(name = "getTestServiceWithCount")
+	public static Object[][] getTestServiceWithCount() throws Exception {
+		int itr = 0;
+		TestServiceMock testServiceMock = TestServiceDataReaderUtil.getDataObject(
+				TestServiceMock.class, "test_servicedata.json");
+		TestService[] getTestServicesObject = testServiceMock
+				.getTestServiceWithCount();
+		Object[][] result = new Object[getTestServicesObject.length][];
+		for (TestService getTestService : getTestServicesObject) {
+			result[itr] = new Object[] { getTestService };
+			itr++;
+		}
+		return result;
+	}
+
+	@DataProvider(name = "getTestServiceWithCount_dataProvider")
+	public static Object[][] getTestServiceWithCount_dataProvider() throws Exception {
+		return TestServiceDataUtils.combine(getTestURI(), getTestServiceWithCount());
 	}
 
 }

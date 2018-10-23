@@ -16,14 +16,21 @@ public class TestServiceURLBuilder {
 		urlBuilder.append(url);
 	}
 
-	public String buildURLBasedOnName(
-			TestService testService) {
-		urlBuilder.append(testServiceConfigFileUtil.getPropertyValue(PROPERTY_FILE_NAME,"URI_GET_PARAMS"));
-		urlBuilder.append("?name=");
+	public String buildGetURLBasedOnParams(
+			TestService testService, String params) {
+		urlBuilder.append(testServiceConfigFileUtil.getPropertyValue(PROPERTY_FILE_NAME,params));
+		urlBuilder.append("?q=");
 		urlBuilder.append(testService.getName());
-		urlBuilder.append("?description=");
-		urlBuilder.append(testService.getDescription());
-		
+		return urlBuilder.toString();
+	}
+	
+	public String buildGetURLBasedOnCount(
+			TestService testService, String params) {
+		urlBuilder.append(testServiceConfigFileUtil.getPropertyValue(PROPERTY_FILE_NAME,params));
+		urlBuilder.append("?q=");
+		urlBuilder.append(testService.getName());
+		urlBuilder.append("&count=");
+		urlBuilder.append(testService.getCount());
 		return urlBuilder.toString();
 	}
 }
