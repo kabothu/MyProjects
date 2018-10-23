@@ -4,6 +4,14 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Util class to combine two data providers.This will be very useful if we want to use same url with multiple combinations
+ * of data.
+ * 
+ *  
+ * @author kabothu 
+ */
+
 public class TestServiceDataUtils {
 	
 	private static final TestServiceConfigFileUtil configFileUtil = new TestServiceConfigFileUtil();

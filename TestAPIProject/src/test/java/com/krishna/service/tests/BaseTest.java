@@ -16,6 +16,12 @@ import com.krishna.services.util.ExtentManager;
 import com.krishna.services.util.LoggerHelper;
 import com.krishna.services.util.ResourceHelper;
 
+/**
+ * Base class which needs to be extended by every test class file
+ * 
+ *  
+ * @author kabothu 
+ */
 public class BaseTest {
 
 	private Logger logger = LoggerHelper.getLogger(BaseTest.class);

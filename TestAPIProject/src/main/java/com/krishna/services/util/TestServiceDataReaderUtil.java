@@ -2,14 +2,18 @@ package com.krishna.services.util;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
 import java.util.List;
-
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.map.type.CollectionType;
 import org.codehaus.jackson.map.type.TypeFactory;
+
+/**
+ * Util class to get Data objects.
+ *  
+ * @author kabothu 
+ */
 
 public class TestServiceDataReaderUtil {
 	
@@ -17,8 +21,6 @@ public static final ObjectMapper JSONMAPPER = new ObjectMapper();
 	
 	public static  <T> T getDataObject(Class<T> obj,String fileName) throws JsonParseException, JsonMappingException, IOException{
 		ObjectMapper mapper = new ObjectMapper();
-		//String name = rootPath+"/"+fileName+".json";
-		//System.out.println(name);
 		InputStream is = TestServiceDataReaderUtil.class.getResourceAsStream(fileName);
 		T value = mapper.readValue(is, obj);
 		return value;

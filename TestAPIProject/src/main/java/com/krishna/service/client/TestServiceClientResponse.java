@@ -8,6 +8,12 @@ import com.krishna.service.requestbuilder.TestServiceRequestBuilder;
 import com.krishna.services.util.LoggerHelper;
 import com.sun.jersey.api.client.ClientResponse;
 
+/**
+ * Class to get all the different httpRequests
+ *
+ * @author kabothu 
+ */
+
 public class TestServiceClientResponse {
 
 	private Logger logger;
@@ -28,7 +34,7 @@ public class TestServiceClientResponse {
 
 	public ClientResponse getPostResponse(String payload, TestServiceRequestBuilder request) {
 		logger.info("Get http Request: " + request.getUrl());
-		this.response = request.getClient().resource(request.getUrl()).accept(MediaType.APPLICATION_JSON)
+		this.response = request.getClient().resource(request.getUrl()).header("Content-Type",MediaType.APPLICATION_JSON)
 				.post(ClientResponse.class, payload);
 		return response;
 	}

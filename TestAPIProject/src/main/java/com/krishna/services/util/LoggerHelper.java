@@ -3,6 +3,12 @@ package com.krishna.services.util;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
+/**
+ * Class to manage Logging. Used Log4j over here.
+ * 
+ * @author kabothu 
+ */
+
 public class LoggerHelper {
 	
 private static boolean root=false;

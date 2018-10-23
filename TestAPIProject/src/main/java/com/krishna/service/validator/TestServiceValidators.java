@@ -3,8 +3,16 @@ package com.krishna.service.validator;
 import org.testng.asserts.Assertion;
 import com.google.gson.Gson;
 import com.krishna.service.model.ResponsePojoBuilder;
+import com.krishna.service.model.Results;
 import com.krishna.service.model.TestService;
 import com.sun.jersey.api.client.ClientResponse;
+
+/**
+ * Class to manage Validations.We may not need this file. We make the validations more readable and re-usable separated
+ * them into this file so that maintenance will be easier.
+ * 
+ * @author kabothu 
+ */
 
 public class TestServiceValidators {
 
@@ -49,6 +57,25 @@ public class TestServiceValidators {
 			} catch (IllegalArgumentException e) {
 				assertChain.fail("Deserialization of response is not working");
 			}
+			return this;
+		}
+		
+		// Validate Post Call Details
+		public Validator validPostCallDetails(TestService testService, String responseBody) {
+			ResponsePojoBuilder results = new Gson().fromJson(responseBody, ResponsePojoBuilder.class);
+			String expectedTitle = testService.getTitle();
+			Results[] resultsArray = results.getResults();
+			boolean titleFlag = false;
+			for (int i = 0; i <= resultsArray.length-1; i++) {
+				titleFlag = resultsArray[i].getTitle().equals(expectedTitle);
+				if (titleFlag) {
+					assertChain.assertEquals(resultsArray[i].getTitle(), expectedTitle,
+							"Both the titles were not matching");
+				}else {
+					assertChain.fail("Post call movie information is not present in Get call");
+				}
+			}
+
 			return this;
 		}
 	}

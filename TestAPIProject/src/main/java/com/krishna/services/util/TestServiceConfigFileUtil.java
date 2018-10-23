@@ -7,15 +7,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-
+/**
+ * Util class to get property value from properties file.
+ *  
+ * @author kabothu 
+ */
 public class TestServiceConfigFileUtil {
 
 	String result = "";
 	InputStream inputStream = null;
 	
-	// Properties file name
-	//private static final String PROPERTY_FILE_NAME = "/src/main/resources/com/krishna/service/testservice/config/config.properties";
-		
 	public String getPropertyValue(String propFile, String key) {
 
 		String currentDir = System.getProperty("user.dir");

@@ -5,6 +5,12 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+/**
+ * Class to manage Reporting. Used Extent Reports over here.
+ * 
+ * @author kabothu 
+ */
+
 public class ExtentManager {
 	
 private static ExtentReports extent;

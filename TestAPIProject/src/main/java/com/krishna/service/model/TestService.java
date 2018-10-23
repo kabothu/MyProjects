@@ -1,5 +1,11 @@
 package com.krishna.service.model;
 
+
+/**
+ * Class to manage POJO's. Since we don't have a way to map developer POJO's Hence created custom POJO's
+ * 
+ * @author kabothu 
+ */
 public class TestService {
 	private String description;
 
@@ -8,6 +14,10 @@ public class TestService {
 	private String count;
 	
 	private String expectedResponseCode;
+	
+	private String title;
+	
+	private String poster_path;
 
 	public String getDescription() {
 		return description;
@@ -39,6 +49,22 @@ public class TestService {
 
 	public void setExpectedResponseCode(String expectedResponseCode) {
 		this.expectedResponseCode = expectedResponseCode;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getPoster_path() {
+		return poster_path;
+	}
+
+	public void setPoster_path(String poster_path) {
+		this.poster_path = poster_path;
 	}
 
 	@Override

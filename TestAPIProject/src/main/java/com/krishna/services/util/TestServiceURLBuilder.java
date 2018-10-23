@@ -3,6 +3,12 @@ package com.krishna.services.util;
 import com.krishna.service.model.TestService;
 
 
+/**
+ * Util class to build Service URL.
+ * 
+ *  
+ * @author kabothu 
+ */
 public class TestServiceURLBuilder {
 
 	@SuppressWarnings("unused")
@@ -17,20 +23,26 @@ public class TestServiceURLBuilder {
 	}
 
 	public String buildGetURLBasedOnParams(
-			TestService testService, String params) {
-		urlBuilder.append(testServiceConfigFileUtil.getPropertyValue(PROPERTY_FILE_NAME,params));
+			TestService testService, String moviesPath) {
+		urlBuilder.append(testServiceConfigFileUtil.getPropertyValue(PROPERTY_FILE_NAME,moviesPath));
 		urlBuilder.append("?q=");
 		urlBuilder.append(testService.getName());
 		return urlBuilder.toString();
 	}
 	
 	public String buildGetURLBasedOnCount(
-			TestService testService, String params) {
-		urlBuilder.append(testServiceConfigFileUtil.getPropertyValue(PROPERTY_FILE_NAME,params));
+			TestService testService, String moviesPath) {
+		urlBuilder.append(testServiceConfigFileUtil.getPropertyValue(PROPERTY_FILE_NAME,moviesPath));
 		urlBuilder.append("?q=");
 		urlBuilder.append(testService.getName());
 		urlBuilder.append("&count=");
 		urlBuilder.append(testService.getCount());
+		return urlBuilder.toString();
+	}
+	
+	public String buildUrlWithOutParams(
+			TestService testService, String moviesPath) {
+		urlBuilder.append(testServiceConfigFileUtil.getPropertyValue(PROPERTY_FILE_NAME,moviesPath));
 		return urlBuilder.toString();
 	}
 }

@@ -1,15 +1,17 @@
 package com.krishna.service.requestbuilder;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.sun.jersey.api.client.Client;
+
+/**
+ * Class to manage RequestBuilder
+ * 
+ * @author kabothu 
+ */
 
 public class TestServiceRequestBuilder {
 
 	public String CONTENT_TYPE = "application/json";
 	private Client client;
-	private Map<String, String> requestHeaders = new HashMap<String, String>();
 	private String url;
 
 	public TestServiceRequestBuilder(String url) {
@@ -25,14 +27,6 @@ public class TestServiceRequestBuilder {
 		this.client = client;
 	}
 
-	public Map<String, String> getRequestHeaders() {
-		return requestHeaders;
-	}
-
-	public void setRequestHeaders(Map<String, String> requestHeaders) {
-		this.requestHeaders = requestHeaders;
-	}
-	
 	public String getUrl() {
 		return url;
 	}
