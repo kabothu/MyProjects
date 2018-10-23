@@ -52,8 +52,6 @@ public class BaseTest {
 			test.log(Status.FAIL, result.getThrowable());
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
 			test.log(Status.PASS, result.getName() + " is pass");
-			// String imagePath = captureScreen(result.getName(),driver);
-			// test.addScreenCaptureFromPath(imagePath);
 		} else if (result.getStatus() == ITestResult.SKIP) {
 			test.log(Status.SKIP, result.getThrowable());
 		}
