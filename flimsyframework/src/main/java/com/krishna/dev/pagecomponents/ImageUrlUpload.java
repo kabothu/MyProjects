@@ -9,8 +9,8 @@ import com.krishna.dev.utils.ActionUtility;
 
 public class ImageUrlUpload extends ImageUrlUploadLocators {
 
-	private String imageURL = "http://i.ebayimg.qa.ebay.com/00/s/MjAwWDc0MA==/$T6BCp,Fshg8E-gWD5SVcBR(vsj35JQ~~60_43.JPG?set_id=80000000000";
-	private String destinationURL = "http://www.qa.ebay.com";
+	private String imageURL = "http://i.ebayimg.qa.test.com/00/s/MjAwWDc0MA==/$T6BCp,Fshg8E-gWD5SVcBR(vsj35JQ~~60_43.JPG?set_id=80000000000";
+	private String destinationURL = "http://www.qa.test.com";
 		
 	public ImageUrlUpload(WebDriver driver, String url) {
 		super(driver, url);
