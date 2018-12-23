@@ -546,8 +546,7 @@ public static void open(final WebDriver driver, String url) {
   /**
    * Gets the text seen on UI while performing a mouse over on a element.
    * <p>
-   * Note: This method is written to get the 'title' attribute from anchor tags
-   * which are widely used in ebay for links and buttons and images sometimes.
+   * Note: This method is written to get the 'title' attribute from anchor tags.
    * </p>
    * 
    * @param driver
