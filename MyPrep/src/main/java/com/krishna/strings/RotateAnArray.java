@@ -55,7 +55,7 @@ class ArrayRotationProgram {
 public class RotateAnArray {
 
 	public static void main(String[] args) {
-		//ArrayRotationProgram.leftRotate(new int[] { 1, 2, 3, 4, 5, 6, 7 }, 2);
+		ArrayRotationProgram.leftRotate(new int[] { 1, 2, 3, 4, 5, 6, 7 }, 2);
 		ArrayRotationProgram.rightRotate(new int[] { 1, 2, 3, 4, 5, 6, 7 }, 2);
 
 	}

@@ -6,7 +6,6 @@ package com.krishna.arrays;
 
 // N*(N+1)/2 - Where N is the last element
 
-
 //Solution-2
 
 // XOR all the elements in an array using for loop like A1 ^ A2 ^ A4 ^ A5 ^ A6 and let it be X1
@@ -32,6 +31,27 @@ class MissingElement {
 
 		return (nthElement - sumOfElements);
 
+	}
+
+	public static int testUsingXor(int[] array) {
+
+		int x1 = array[0];
+
+		int x2 = 1;
+
+		for (int i = 1; i < array.length; i++) {
+
+			x1 = x1 ^ array[i];
+
+		}
+
+		for (int i = 2; i <= array.length + 1; i++) {
+
+			x2 = x2 ^ i;
+
+		}
+
+		return x1 ^ x2;
 	}
 }
 

@@ -1,41 +1,43 @@
 package com.krishna.strings;
 
+//https://www.youtube.com/watch?v=8ZlmgBcQzMM&t=45s
+
+///https://webrewrite.com/longest-substring-without-repeating-characters/
+
 import java.util.HashSet;
+import java.util.Set;
 
 class LongestSubString {
 	public int lengthOfLongestSubstring(String s) {
+
+		int maxCount = 0;
+		int i = 0;
+		int j = 0;
+		Set<Character> set = new HashSet<Character>();
+
 		if (s == null || s.length() == 0) {
 			return 0;
 		}
-		int result = 0;
-		int k = 0;
-		HashSet<Character> set = new HashSet<Character>();
-		for (int i = 0; i < s.length(); i++) {
-			char c = s.charAt(i);
-			if (!set.contains(c)) {
-				set.add(c);
-				result = Math.max(result, set.size());
+
+		while (i < s.length() && j < s.length()) {
+			if (!set.contains(s.charAt(j))) {
+				set.add(s.charAt(j));
+				maxCount = Math.max(maxCount, set.size());
+				j++;
 			} else {
-				while (k < i) {
-					if (s.charAt(k) == c) {
-						k++;
-						break;
-					} else {
-						set.remove(s.charAt(k));
-						k++;
-					}
-				}
+				set.remove(s.charAt(i));
+				i++;
 			}
 		}
+		return maxCount;
 
-		return result;
 	}
 }
 
 public class FindLongestSubString {
 
 	public static void main(String[] args) {
-		String s1 = "aabbc";
+		String s1 = "pwwwkew";
 		LongestSubString longest = new LongestSubString();
 		System.out.println(longest.lengthOfLongestSubstring(s1));
 

@@ -1,5 +1,8 @@
 package com.krishna.strings;
 
+//https://www.youtube.com/watch?v=UflHuQj6MVA&t=699s
+//https://www.geeksforgeeks.org/longest-palindrome-substring-set-1/
+
 class LongestPalindromeSolution {
 	
 	public static String longestPalindrome(String s) {

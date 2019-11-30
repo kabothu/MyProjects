@@ -1,5 +1,9 @@
 package com.krishna.arrays;
 
+//https://javarevisited.blogspot.com/2015/08/how-to-find-all-permutations-of-string-java-example.html
+
+//https://www.youtube.com/watch?v=GuTPwotSdYw
+
 class PermutationSolution {
 
 	public static void permutation(String prefix, String str) {
