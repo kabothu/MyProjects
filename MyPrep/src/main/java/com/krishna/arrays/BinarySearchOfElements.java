@@ -4,6 +4,8 @@ package com.krishna.arrays;
 
 //https://www.geeksforgeeks.org/binary-search/
 
+// https://www.youtube.com/watch?v=-bQ4UzUmWe8
+
 class BinarySearch {
 
 	public static int testBinarySearch(int[] array, int key) {
