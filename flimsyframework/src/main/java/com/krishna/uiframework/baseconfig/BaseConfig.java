@@ -1,4 +1,4 @@
-package com.krishna.dev.baseconfig;
+package com.krishna.uiframework.baseconfig;
 
 import org.openqa.selenium.WebDriver;
 

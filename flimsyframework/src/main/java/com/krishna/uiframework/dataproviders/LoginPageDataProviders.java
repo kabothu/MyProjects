@@ -1,10 +1,9 @@
-package com.krishna.dev.dataproviders;
-
-import java.lang.reflect.Method;
+package com.krishna.uiframework.dataproviders;
 
 import org.testng.annotations.DataProvider;
 
-import com.krishna.dev.utils.ExcelFileUtility;
+import com.krishna.uiframework.utils.ExcelFileUtility;
+
 
 public class LoginPageDataProviders {
 	

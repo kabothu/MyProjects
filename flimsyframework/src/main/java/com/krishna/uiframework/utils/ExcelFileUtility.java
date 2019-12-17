@@ -1,4 +1,4 @@
-package com.krishna.dev.utils;
+package com.krishna.uiframework.utils;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package com.krishna.dev.utils;
+package com.krishna.uiframework.utils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,7 +8,7 @@ import java.util.Properties;
 
 public class PropertyFileUtility {
 
-	public String getPropertyValue(String key) {
+	public static String getPropertyValue(String key) {
 
 		String currentDir = System.getProperty("user.dir");
 		String filePath = (currentDir + "/src/main/resources/com/krishna/testData/config.properties").replace('\\',
