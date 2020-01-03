@@ -1,25 +1,36 @@
 package com.krishna.strings;
 
+// String to Integer
+
+class StringToIntegerSolution {
+
+	public static void StringToInteger(String s1) {
+
+		int finalNumber = 0;
+		int result = 0;
+
+		for (int i = 0; i < s1.length(); i++) {
+			result = result * 10;
+			int number = (int) s1.charAt(i);
+			finalNumber = number - 48;
+			result = result + finalNumber;
+
+		}
+		System.out.println(result);
+
+	}
+
+}
+
 public class AsciiTest {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
-		int zeroAscii = (int)'0';
-		System.out.println(zeroAscii);
 
-      char c= 'A';
-      int ascii =(int)c;
-      System.out.println(ascii);
-      
-     String[] str1 = {"selenium","krishna","welcome","India"};
-     System.out.println(str1.length);
-     
-     int[] i= new int[]{5,2,3,6};
-     System.out.println(i.length);
-     
+		String s1 = "210";
+		StringToIntegerSolution.StringToInteger(s1);
 
 	}
 
