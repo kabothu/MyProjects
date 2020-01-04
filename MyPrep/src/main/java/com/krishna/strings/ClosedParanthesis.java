@@ -1,6 +1,5 @@
 package com.krishna.strings;
 
-import java.util.HashMap;
 import java.util.Stack;
 
 class ClosedParanthesisSolution {
@@ -15,25 +14,18 @@ class ClosedParanthesisSolution {
 
 				st.push(str.charAt(i));
 
+			} else if (str.charAt(i) == ')' && !st.isEmpty() && st.peek() == '(') {
+				st.pop();
+			} else if (str.charAt(i) == ']' && !st.isEmpty() && st.peek() == '[') {
+				st.pop();
+			} else if (str.charAt(i) == '}' && !st.isEmpty() && st.peek() == '{') {
+				st.pop();
 			} else {
-				if (st.isEmpty()) {
-					return false;
-				} else {
-					char pop_value = st.pop();
-					if (str.charAt(i) == ')' && pop_value != '(') {
-						return false;
-					} else if (str.charAt(i) == ']' && pop_value != '[') {
-						return false;
-					} else if (str.charAt(i) == ']' && pop_value != '[') {
-						return false;
-					}
-				}
+				return false;
 			}
 		}
-		if (st.isEmpty()) {
-			return true;
-		}
-		return false;
+
+		return st.isEmpty();
 
 	}
 }
@@ -41,7 +33,7 @@ class ClosedParanthesisSolution {
 public class ClosedParanthesis {
 
 	public static void main(String[] args) {
-		String str ="([()])";
+		String str = "([()])";
 		System.out.println(ClosedParanthesisSolution.testClosedParanthesisSolution(str));
 
 	}
