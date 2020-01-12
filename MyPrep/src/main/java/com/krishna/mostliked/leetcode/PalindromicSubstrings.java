@@ -1,4 +1,4 @@
-package com.krishna.mostliked.leetcode;
+ package com.krishna.mostliked.leetcode;
 
 //https://www.youtube.com/watch?v=QX8RBlXvKXg
 
@@ -14,7 +14,7 @@ class PalindromicSubStringsSolution {
             for(int j = i; j >= 0; j--){
 
                 
-                if(s.charAt(j) == s.charAt(i) && (i-j <= 2  || dp[i-1][j+1]) ){
+                if(s.charAt(j) == s.charAt(i) && (i-j <= 2  || dp[i+1][j-1]) ){
                     dp[i][j] = true;
                 }
                 

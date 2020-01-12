@@ -4,6 +4,8 @@ import java.util.Stack;
 
 //https://www.youtube.com/watch?v=MeRb_1bddWg
 
+// Postfix to prefix we have to scan the elements from right to left and op1 and op2 in the order
+
 
 class PrefixToPostfix {
 	

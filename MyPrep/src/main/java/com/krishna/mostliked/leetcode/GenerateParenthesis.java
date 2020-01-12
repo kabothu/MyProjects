@@ -6,6 +6,8 @@ import java.util.List;
 //https://www.youtube.com/watch?v=tyVBx-OtDug
 //https://leetcode.com/problems/generate-parentheses/
 
+//t -2^n and s- 2^n
+
 class GenerateParenthesisSolution {
 
 	public static List<String> testGenerateParenthesis(int n) {

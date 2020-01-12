@@ -20,8 +20,8 @@ class TargetSumSolution {
 				count ++;
 			}
 		}else {
-			calculateSum(num, i+1, sum + num[i], S);
-			calculateSum(num, i+1, sum - num[i], S);
+			calculateSum(num, i+1, sum + num[i], S); // for positive
+			calculateSum(num, i+1, sum - num[i], S); // for negative
 		}
 	}
 }
