@@ -23,7 +23,11 @@ class TwoSumCheckSolution {
 				map.put(nums[i], i);
 			}
 		}
-		return result;
+		if (result[0] == 0 || result[1] == 0) {
+			return null;
+		} else {
+			return result;
+		}
 
 	}
 }
@@ -33,7 +37,10 @@ public class TwoSumCheck {
 	public static void main(String[] args) {
 		int[] nums = { 2, 7, 11, 15 };
 		int target = 9;
-		System.out.println(TwoSumCheckSolution.twoSum(nums, target));
+		int[] result = TwoSumCheckSolution.twoSum(nums, target);
+		for(int i:result) {
+			System.out.println(i);
+		}
 
 	}
 

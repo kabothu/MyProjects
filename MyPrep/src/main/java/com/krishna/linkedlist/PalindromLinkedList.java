@@ -4,6 +4,12 @@ package com.krishna.linkedlist;
 
 //https://www.youtube.com/watch?v=vHam6riSavo
 
+// 1->2->2->1->null
+
+// F - 1->2->2->null
+
+// S - 1->2->null
+
 
 /*
    class PalindromeListLinkedListSolution {

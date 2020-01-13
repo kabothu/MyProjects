@@ -7,12 +7,12 @@ public class RotateMatrix {
 	}
 
 	public RotateMatrix() {
-		int[][] matrix = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 }, { 17, 18, 19, 20 } };
+		int[][] matrix = { { 1, 2, 3 }, { 5, 6, 7 }, { 9, 10, 11 } };;
 
 		System.out.println("Original Matrix :");
 		printMatrix(matrix);
 
-		int[][] rotatedMatrix = rotateMatrixBy90DegreeCounterClockwise(matrix);
+		int[][] rotatedMatrix = rotateMatrixBy90DegreeClockwise(matrix);
 		System.out.println("Rotated Matrix :");
 		printMatrix(rotatedMatrix);
 	}

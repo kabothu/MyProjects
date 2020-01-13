@@ -11,7 +11,7 @@ class EquilibriumPoint {
 		int leftSum = 0;
 		int rightSum = 1;
 		int total;
-		if (array.length > 3) {
+		if (array.length > 2) {
 
 			for (int i = 1; i <= array.length - 1; i++) {
 
