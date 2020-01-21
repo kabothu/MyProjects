@@ -19,12 +19,38 @@ class SubArraySumEqualsKSolution {
 		}
 		return count;
 	}
+
+	public static void testSubArraySumSolution2(int[] nums, int k) {
+
+		int currentSum = 0;
+		int rightPointer = 0;
+		int leftPointer = 0;
+		while (currentSum < k) {
+
+			currentSum = currentSum + nums[rightPointer];
+			rightPointer++;
+		}
+		int rightPointerPosition = rightPointer-1;
+		
+		while (currentSum >= k) {
+
+			currentSum = currentSum - nums[leftPointer];
+			leftPointer++;
+		}
+		int leftPointerPosition = leftPointer-1;
+		for(int i= leftPointerPosition; i<=rightPointerPosition; i++) {
+			System.out.println(nums[i]);
+		}
+	}
+	
 }
 
 public class SubArraySumEqualsK {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		int[] nums = {1,1,1};
+		int k = 2;
+		SubArraySumEqualsKSolution.testSubArraySumSolution2(nums, k);
 
 	}
 
