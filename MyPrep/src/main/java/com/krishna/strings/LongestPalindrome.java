@@ -20,7 +20,8 @@ class LongestPalindromeSolution {
 
 		for (int i = 0; i <= s.length(); i++) {
 			for (int j = 0; j < i + 1; j++) {
-				if (reverseStr.contains(s.substring(j, j + s.length() - i))) {
+				String s2 = s.substring(j, j + s.length() - i);
+				if (reverseStr.contains(s2)) {
 
 					reverseStr = new String(s.substring(j, j + s.length() - i));
 					n = true;

@@ -21,6 +21,8 @@ class LongestRepeatingCharacterReplacementSolution {
 			maxCount = Math.max(maxCount, currentCharCount);
 
 			while (windowEnd - windowStart - maxCount + 1 > k) {
+				
+				// Sliding Window - Similar characters(maxCount) + 1(as we are adding new character)
 				charCounts[s.charAt(windowStart) - 'A']--;
 				windowStart++;
 
