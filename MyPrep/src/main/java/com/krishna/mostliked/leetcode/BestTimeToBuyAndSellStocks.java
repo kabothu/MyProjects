@@ -6,7 +6,7 @@ package com.krishna.mostliked.leetcode;
 
 class BestTimeToBuyAndSellStocksSolution {
 
-	public int maxProfit(int[] prices) {
+	public static int maxProfit(int[] prices) {
 
 		int max = 0;
 		int min = Integer.MAX_VALUE;
@@ -27,7 +27,8 @@ class BestTimeToBuyAndSellStocksSolution {
 public class BestTimeToBuyAndSellStocks {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		int[] prices = {7,1,5,3,6,4};
+		System.out.println(BestTimeToBuyAndSellStocksSolution.maxProfit(prices));
 
 	}
 

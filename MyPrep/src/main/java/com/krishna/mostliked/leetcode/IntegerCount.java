@@ -47,7 +47,7 @@ public class IntegerCount {
 
 	public static void main(String[] args) {
 		int[] nums = { 1, 1, 2, 3, 4 };
-		//System.out.println(IntegerCountSolution.singleNumber(nums));
+		System.out.println(IntegerCountSolution.singleNumber(nums));
 		//IntegerCountSolution.hasDuplicates(nums);
 		IntegerCountSolution.hasDuplicatesSolution(nums);
 
