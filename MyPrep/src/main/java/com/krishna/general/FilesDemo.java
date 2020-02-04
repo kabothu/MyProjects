@@ -27,7 +27,6 @@ public class FilesDemo {
 		BufferedReader br = new BufferedReader(new InputStreamReader(fis));
 		
 		
-		
 		//String[] split = br.readLine().split(" ");
 		
 		//System.out.println(split[0]);
