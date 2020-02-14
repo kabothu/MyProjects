@@ -12,6 +12,8 @@ import java.util.List;
 //https://www.geeksforgeeks.org/heaps-algorithm-for-generating-permutations/
 
 class Solution {
+	
+	// Using BackTracking
 	public static List<List<Integer>> permute(int[] nums) {
 		List<List<Integer>> lists = new ArrayList<>();
 		if (nums == null || nums.length == 0) {
@@ -36,6 +38,8 @@ class Solution {
 			cur.remove(cur.size() - 1);
 		}
 	}
+	
+	
 }
 
 public class Permutations {
@@ -43,7 +47,6 @@ public class Permutations {
 	public static void main(String[] args) {
 		int[] nums = {1,2,3};
 		System.out.println(Solution.permute(nums));
-		
 
 	}
 
