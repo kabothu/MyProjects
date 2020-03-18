@@ -33,7 +33,7 @@ class IntegerCountSolution {
 
 		Arrays.sort(arrA);
 
-		for (int i = 0; i < arrA.length - 1; i++) {
+		for (int i = 0; i < arrA.length-1; i++) {
 			if (!(arrA[i] == arrA[i + 1])) {
 				continue;
 			} else {
@@ -46,7 +46,7 @@ class IntegerCountSolution {
 public class IntegerCount {
 
 	public static void main(String[] args) {
-		int[] nums = { 1, 1, 2, 3, 4 };
+		int[] nums = { 1, 1, 2, 3,-4, 4,4,2,-4};
 		System.out.println(IntegerCountSolution.singleNumber(nums));
 		//IntegerCountSolution.hasDuplicates(nums);
 		IntegerCountSolution.hasDuplicatesSolution(nums);

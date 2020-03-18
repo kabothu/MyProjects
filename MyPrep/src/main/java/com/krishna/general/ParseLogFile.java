@@ -22,8 +22,6 @@ class FindSuccessIpCount {
 
 			String IP = matcher.group(1);
 			String Response = matcher.group(8);
-			String get = matcher.group(2);
-			System.out.println("Hello........"+get);
 			int response = Integer.parseInt(Response);
 
 			// Inserting the IP addresses in the 

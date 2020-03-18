@@ -5,7 +5,7 @@ class UrlifySolution {
 	public static String replace(String s,int length) {
 
         char arr[] = s.toCharArray();
-        StringBuilder sb = new StringBuilder(length);
+        StringBuffer sb = new StringBuffer(length);
 
         for (int i = 0; i < length; i++) {
             if (arr[i] ==' ')

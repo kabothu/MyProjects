@@ -34,7 +34,7 @@ public class SplitBasedOnDelimeters {
 		String text = "geeks1for2geeks3";
 
 		// Specifies the string pattern which is to be searched 
-		String delimiter = "\\d";
+		String delimiter = "[0-9]";
 		Pattern pattern = Pattern.compile(delimiter, Pattern.CASE_INSENSITIVE);
 
 		// Used to perform case insensitive search of the string 

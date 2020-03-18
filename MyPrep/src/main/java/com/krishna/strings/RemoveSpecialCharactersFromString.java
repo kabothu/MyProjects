@@ -9,16 +9,21 @@ public class RemoveSpecialCharactersFromString {
 		String s = "Hel@#$%lo";
 		String newString = "";
 		Pattern pattern = Pattern.compile("[!@#$%&*()_+=|<>?{}\\[\\]~-]");
-		for(int i=0; i<s.length();i++) {
+		String[] split = pattern.split(s);
+		String output ="";
+		for(String str: split) {
+			output = output + str;
+		}
+		/*for(int i=0; i<s.length();i++) {
 			Matcher specialCharacters = pattern.matcher(String.valueOf(s.charAt(i)));
 			
 			if(!specialCharacters.find()) {
 				newString = newString + s.charAt(i);
 			}
 			
-
-		}
-		System.out.println(newString);
+		
+		}*/
+		System.out.println(output);
 	}
 
 }
