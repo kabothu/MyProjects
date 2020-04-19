@@ -48,8 +48,8 @@ class SubArraySumEqualsKSolution {
 public class SubArraySumEqualsK {
 
 	public static void main(String[] args) {
-		int[] nums = {1,1,1};
-		int k = 2;
+		int[] nums = {1,4,20,3,10,5};
+		int k = 33;
 		SubArraySumEqualsKSolution.testSubArraySumSolution2(nums, k);
 
 	}

@@ -29,3 +29,46 @@ public class RotateAString {
 	}
 
 }
+
+/*class testDummy {
+
+public static void swap(String[] str, int start, int end){
+  
+  while(start < end) {
+    
+    String temp = str[start];
+    str[start] = str[end];
+    str[end] = temp;
+    start++;
+    end--;
+  }
+}
+
+
+public static void testThreeSum(String[] str, int r, int n) {
+  
+  swap(str, 0, n-1);
+  swap(str, 0, r-1);
+  swap(str, r, n-1);
+  
+  for(int i=0; i<str.length;i++){
+    
+    System.out.println(str[i]);
+    
+  }
+  
+}
+
+}
+class Solution {
+public static void main(String[] args) {
+  String input = "Lord Balaji is Great God";
+  String[] str = input.split(" ");
+  int r = 2;
+  int n = str.length;
+  testDummy.testThreeSum(str,r,n);
+  
+  
+}
+}
+*/

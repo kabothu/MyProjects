@@ -27,6 +27,10 @@ public class SubStringTest {
 		System.out.println(str1);
 		System.out.println(str2);
 		
+		String name = "Mr.Perfect";
+		String newName = name.replaceAll("\\W", "").toLowerCase();
+		System.out.println("Hello........."+newName);
+		
 
 	}
 

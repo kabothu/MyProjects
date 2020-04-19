@@ -14,9 +14,8 @@ class StringPalindromeSolution {
 				n = true;
 			}else {
 				n = false;
-			}
-			if(n == false)
 				break;
+			}
 		}
 		return n;
 	}
@@ -25,7 +24,7 @@ class StringPalindromeSolution {
 public class StringPalindrome {
 
 	public static void main(String[] args) {
-		String str ="abbacbabba";
+		String str ="abaa";
 		System.out.println(StringPalindromeSolution.testStringPalindrome(str));
 
 	}

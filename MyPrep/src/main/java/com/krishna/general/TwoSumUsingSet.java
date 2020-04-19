@@ -25,7 +25,7 @@ public class TwoSumUsingSet {
 
 	public static void main(String[] args) {
 		int a [] ={ 19, 5, 1, 2, 18, 6, 8, 9, 0, -1, -9, 10, -2 };
-		int sum =17;
+		int sum =1;
 		TwoSumProblemUsingSet.testTwoSumProblemUsingSet(a,sum);
 	}
 

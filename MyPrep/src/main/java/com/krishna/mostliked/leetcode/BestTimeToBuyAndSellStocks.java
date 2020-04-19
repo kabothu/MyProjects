@@ -4,6 +4,8 @@ package com.krishna.mostliked.leetcode;
 
 //https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/
 
+//https://www.youtube.com/watch?v=K8iHi8AW1ls
+
 class BestTimeToBuyAndSellStocksSolution {
 
 	public static int maxProfit(int[] prices) {

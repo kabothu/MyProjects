@@ -32,7 +32,7 @@ public class SplitBasedOnDelimeters {
 
 	public static void main(String[] args) {
 		String text = "geeks1for2geeks3";
-
+		
 		// Specifies the string pattern which is to be searched 
 		String delimiter = "[0-9]";
 		Pattern pattern = Pattern.compile(delimiter, Pattern.CASE_INSENSITIVE);

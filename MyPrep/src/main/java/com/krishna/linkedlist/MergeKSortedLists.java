@@ -1,5 +1,10 @@
 package com.krishna.linkedlist;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 //https://leetcode.com/problems/merge-k-sorted-lists/
 
 //https://www.youtube.com/watch?v=zLcNwcR6yO4
@@ -43,6 +48,14 @@ public class MergeKSortedLists {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		System.out.println("hello");
+		List<String> list = new ArrayList<String>();
+		
+		if(list.size()==0) {
+			System.out.println("hello");
+		}
+		
 
 	}
 

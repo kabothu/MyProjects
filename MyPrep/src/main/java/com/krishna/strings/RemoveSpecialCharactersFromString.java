@@ -10,20 +10,16 @@ public class RemoveSpecialCharactersFromString {
 		String newString = "";
 		Pattern pattern = Pattern.compile("[!@#$%&*()_+=|<>?{}\\[\\]~-]");
 		String[] split = pattern.split(s);
-		String output ="";
+		
 		for(String str: split) {
-			output = output + str;
-		}
-		/*for(int i=0; i<s.length();i++) {
-			Matcher specialCharacters = pattern.matcher(String.valueOf(s.charAt(i)));
+			Matcher specialCharacters = pattern.matcher(str);
 			
 			if(!specialCharacters.find()) {
-				newString = newString + s.charAt(i);
+				newString = newString + str;
 			}
-			
+		}
+		System.out.println(newString);
 		
-		}*/
-		System.out.println(output);
 	}
 
 }

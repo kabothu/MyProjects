@@ -13,7 +13,8 @@ class TwoSumProblemWithLessComplexity {
 		Arrays.sort(arr);
 		int max = arr[arr.length-1];
 		// Declares and initializes the whole array as false
-		boolean[] binmap = new boolean[max +1];
+		int booleanArrayLength = Math.max(max, sum);
+		boolean[] binmap = new boolean[booleanArrayLength];
 		int count = 0;
 		for (int i = 0; i < arr.length; ++i) {
 			int temp = sum - arr[i];
@@ -30,7 +31,7 @@ class TwoSumProblemWithLessComplexity {
 
 	// Main to test the above function
 	public static void main(String[] args) {
-		int A[] = { 1, 4, 45, 6, 10, 8 };
+		int A[] = { 1,0,3,2,6,4,12 };
 		int sum = 16;
 		printpairs(A, sum);
 	}
