@@ -1,6 +1,6 @@
 package com.krishna.utils;
 
-public class BeanClass {
+public class BeanClassData {
 
 	String name;
 	String address;
@@ -28,6 +28,11 @@ public class BeanClass {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	@Override
+	public String toString() {
+		return "BeanClass [name=" + name + ", address=" + address + ", email=" + email + "]";
 	}
 
 }

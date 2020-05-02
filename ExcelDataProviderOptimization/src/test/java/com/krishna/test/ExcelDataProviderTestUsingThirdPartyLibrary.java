@@ -4,7 +4,7 @@ import java.util.Map;
 
 import org.testng.annotations.Test;
 
-import com.krishna.utils.BeanClass;
+import com.krishna.utils.BeanClassData;
 import com.qmetry.qaf.automation.testng.dataprovider.QAFDataProvider;
 
 public class ExcelDataProviderTestUsingThirdPartyLibrary {
@@ -19,7 +19,7 @@ public class ExcelDataProviderTestUsingThirdPartyLibrary {
 	
 	@QAFDataProvider(dataFile = "src/test/resources/excelfile.xls", sheetName = "excelreader")
 	@Test
-	public void testWithBeanClass(BeanClass data) {
+	public void testWithBeanClass(BeanClassData data) {
 
 		System.out.println(data.getName());
 	}

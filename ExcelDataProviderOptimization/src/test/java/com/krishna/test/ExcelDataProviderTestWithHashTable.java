@@ -4,6 +4,7 @@ import java.util.Hashtable;
 
 import org.testng.annotations.Test;
 
+import com.krishna.utils.BeanClassData;
 import com.krishna.utils.DataProviders;
 
 public class ExcelDataProviderTestWithHashTable {
@@ -18,5 +19,11 @@ public class ExcelDataProviderTestWithHashTable {
 	public void testDataProviderUsingAllArgumentsExample(String name, String address, String email) {
 
 		System.out.println(name);
+	}
+	
+	@Test(dataProvider = "newJson", dataProviderClass = DataProviders.class)
+	public void testDataProviderUsingJsonExample(BeanClassData data) {
+
+		System.out.println(data.getName());
 	}
 }
