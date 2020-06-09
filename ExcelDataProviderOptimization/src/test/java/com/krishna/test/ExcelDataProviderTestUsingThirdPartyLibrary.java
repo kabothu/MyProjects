@@ -4,7 +4,7 @@ import java.util.Map;
 
 import org.testng.annotations.Test;
 
-import com.krishna.utils.BeanClassData;
+import com.krishna.model.BeanClassData;
 import com.qmetry.qaf.automation.testng.dataprovider.QAFDataProvider;
 
 public class ExcelDataProviderTestUsingThirdPartyLibrary {

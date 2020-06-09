@@ -4,8 +4,9 @@ import java.util.Hashtable;
 
 import org.testng.annotations.Test;
 
-import com.krishna.utils.BeanClassData;
-import com.krishna.utils.DataProviders;
+import com.krishna.dataproviders.DataProviders;
+import com.krishna.model.BeanClassData;
+
 
 public class DataProviderExampleUsingJson {
 

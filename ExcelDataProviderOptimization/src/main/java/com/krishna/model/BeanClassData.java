@@ -1,4 +1,4 @@
-package com.krishna.utils;
+package com.krishna.model;
 
 public class BeanClassData {
 

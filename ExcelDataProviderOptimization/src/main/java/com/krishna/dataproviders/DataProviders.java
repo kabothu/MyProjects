@@ -1,4 +1,4 @@
-package com.krishna.utils;
+package com.krishna.dataproviders;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -10,6 +10,9 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
+import com.krishna.model.BeanClassData;
+import com.krishna.utils.DataUtil;
+import com.krishna.utils.ExcelUtilsCommon;
 
 public class DataProviders {
 
