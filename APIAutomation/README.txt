@@ -20,3 +20,6 @@ RESPONSE MESSAGE: "Invalid API key. Please see http://openweathermap.org/faq#err
 3.	Using “[GET] /stations” API verify that the stations were successfully stored in the DB and their values are the same as specified in the registration request. 
 4.	Delete both of the created stations and verify that returned HTTP response is 204. 
 5.	Repeat the previous step and verify that returned HTTP response is 404 and that message body contains “message”: “Station not found". 
+
+
+References:https://openweathermap.org/stations
