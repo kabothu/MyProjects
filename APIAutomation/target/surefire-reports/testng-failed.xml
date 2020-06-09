@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [com.automation.tests.TestWeatherAPI]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.automation.tests.TestWeatherAPI">
+        <methods>
+          <include name="registerWeatherStationThroughPostCall"/>
+          <include name="testDataProviderUsingJsonExample"/>
+        </methods>
+      </class> <!-- com.automation.tests.TestWeatherAPI -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [com.automation.tests.TestWeatherAPI] -->

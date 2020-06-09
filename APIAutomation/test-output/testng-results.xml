@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="example suite 1" duration-ms="4321" started-at="2020-06-09T05:10:54Z" finished-at="2020-06-09T05:10:58Z">
+    <groups>
+    </groups>
+    <test name="Regression suite 1" duration-ms="4321" started-at="2020-06-09T05:10:54Z" finished-at="2020-06-09T05:10:58Z">
+      <class name="com.automation.tests.TestWeatherAPI">
+        <test-method status="PASS" signature="weatherStationWithoutAPIKey()[pri:0, instance:com.automation.tests.TestWeatherAPI@4520ebad]" name="weatherStationWithoutAPIKey" duration-ms="1283" started-at="2020-06-09T00:10:54Z" finished-at="2020-06-09T00:10:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- weatherStationWithoutAPIKey -->
+        <test-method status="PASS" signature="registerWeatherStationThroughPostCall(com.automation.model.PayLoadDataModel)[pri:0, instance:com.automation.tests.TestWeatherAPI@4520ebad]" name="registerWeatherStationThroughPostCall" duration-ms="682" started-at="2020-06-09T00:10:55Z" data-provider="RegisterWeatherStations" finished-at="2020-06-09T00:10:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.automation.model.PayLoadDataModel@4cc6fa2a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWeatherStationThroughPostCall -->
+        <test-method status="PASS" signature="registerWeatherStationThroughPostCall(com.automation.model.PayLoadDataModel)[pri:0, instance:com.automation.tests.TestWeatherAPI@4520ebad]" name="registerWeatherStationThroughPostCall" duration-ms="323" started-at="2020-06-09T00:10:56Z" data-provider="RegisterWeatherStations" finished-at="2020-06-09T00:10:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.automation.model.PayLoadDataModel@654d8173]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWeatherStationThroughPostCall -->
+        <test-method status="PASS" signature="getStationsAPI()[pri:0, instance:com.automation.tests.TestWeatherAPI@4520ebad]" name="getStationsAPI" duration-ms="326" started-at="2020-06-09T00:10:56Z" finished-at="2020-06-09T00:10:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getStationsAPI -->
+        <test-method status="PASS" signature="deleteBothStations()[pri:0, instance:com.automation.tests.TestWeatherAPI@4520ebad]" name="deleteBothStations" duration-ms="1218" started-at="2020-06-09T00:10:57Z" finished-at="2020-06-09T00:10:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBothStations -->
+        <test-method status="PASS" signature="testMessageAfterDeletion()[pri:0, instance:com.automation.tests.TestWeatherAPI@4520ebad]" name="testMessageAfterDeletion" duration-ms="431" started-at="2020-06-09T00:10:58Z" finished-at="2020-06-09T00:10:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMessageAfterDeletion -->
+      </class> <!-- com.automation.tests.TestWeatherAPI -->
+    </test> <!-- Regression suite 1 -->
+  </suite> <!-- example suite 1 -->
+</testng-results>
